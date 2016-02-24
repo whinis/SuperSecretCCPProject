@@ -5,6 +5,6 @@ ITS A SECRET
 - install npm & jspm
 
 *Installation:*
--- npm install
--- jspm install 
+- npm install
+- jspm install 
 
