@@ -7,16 +7,17 @@
  */
 include("classes/class_Curl.php");
 include("classes/class_db.php");
+include("classes/class_crest.php");
 
 
 $db=new db();
 $db->loadByParams(
-    HOST,       //host
-    USER,       //username
-    PASSWORD,   //password
-    DATABASE,   //db
-    PORT,       //port
-    FALSE       //Debug mode
+    "127.0.0.1",       //host
+    "root",       //username
+    "790825",   //password
+    "sde",   //db
+    3306,       //port
+    true       //Debug mode
 );
 if($db->destroy)
     $db=null;

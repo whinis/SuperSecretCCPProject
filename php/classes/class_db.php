@@ -385,11 +385,7 @@ class db
 				$statement.=" LIMIT ".$this->escape(array($limit[0],"int"),"",true).",".$this->escape(array($limit[1],"int"),"",true);
 		}
         $this->_prepare($statement.";");
-        if($this->_prepared==false) {
-            return $this->query();
-        }else{
-            return $this;
-        }
+		return $this->query();
 	}
 	/************************************************************************/
 	/*Description:public function which build a insert sql statement based	*/
@@ -743,9 +739,5 @@ class db
 	}
 
 }
-$db=new db();
-$db->loadByParams($config['db']['host'],$config['db']['user'],$config['db']['pass'],$config['db']['database'],$config['db']['port'],$config['debug']);
-if($db->destroy)
-	$db=null;
 
 ?>
